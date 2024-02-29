@@ -6,11 +6,11 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 16:33:59 by dukim             #+#    #+#             */
-/*   Updated: 2024/02/28 16:35:02 by dukim            ###   ########.fr       */
+/*   Updated: 2024/02/29 11:27:45 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 

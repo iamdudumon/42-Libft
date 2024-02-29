@@ -6,7 +6,7 @@
 /*   By: dukim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 21:39:32 by dukim             #+#    #+#             */
-/*   Updated: 2024/02/29 00:44:42 by dukim            ###   ########.fr       */
+/*   Updated: 2024/02/29 02:08:30 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	j;
+	size_t	dst_len;
+	size_t	src_len;
 
-	i = 0;
-	j = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j + i + 1 < size)
+	dst_len = 0;
+	src_len = 0;
+	while (dst[dst_len] != '\0')
+		dst_len++;
+	while (src[src_len] != '\0' && dst_len + src_len + 1 < size)
 	{
-		dst[i + j] = src[j];
-		j++;
+		dst[dst_len + src_len] = src[src_len];
+		src_len++;
 	}
-	while (src[j] != '\0')
-		j++;
-	dst[i + j] = '\0';
-	if (i >= size)
-		return (j + size);
-	return (i + j);
+	while (src[src_len] != '\0')
+		src_len++;
+	dst[dst_len + src_len] = '\0';
+	if (dst_len >= size)
+		return (src_len + size);
+	return (dst_len + src_len);
 }
 /*
 #include <stdio.h>
