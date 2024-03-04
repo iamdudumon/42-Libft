@@ -6,11 +6,11 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 02:25:18 by dukim             #+#    #+#             */
-/*   Updated: 2024/02/29 11:12:41 by dukim            ###   ########.fr       */
+/*   Updated: 2024/03/04 14:04:40 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (size < n)
 	{
 		if (*(convert_s + size) == convert_c)
-			return ((void *)(convert + size));
+			return ((void *)(convert_s + size));
 		size++;
 	}
 	return (0);

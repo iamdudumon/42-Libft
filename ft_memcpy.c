@@ -6,11 +6,11 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:30:47 by dukim             #+#    #+#             */
-/*   Updated: 2024/02/28 22:52:23 by dukim            ###   ########.fr       */
+/*   Updated: 2024/03/04 13:42:24 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

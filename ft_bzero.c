@@ -6,20 +6,13 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:09:49 by dukim             #+#    #+#             */
-/*   Updated: 2024/02/29 02:10:59 by dukim            ###   ########.fr       */
+/*   Updated: 2024/03/04 13:38:54 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	size;
-
-	size = 0;
-	while (size < n)
-	{
-		*((unsigned char *)s + size) = 0;
-		size++;
-	}
+	ft_memset(s, 0, n);
 }

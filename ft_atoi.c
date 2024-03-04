@@ -10,13 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_number(char ch)
-{
-	if (ch >= '0' && ch <= '9')
-		return (1);
-	return (0);
-}
-
 int	is_space_ch(char ch)
 {
 	if ((9 <= ch && ch <= 13) || ch == ' ')
@@ -46,7 +39,7 @@ int	ft_atoi(const char *nptr)
 			minus_cnt++;
 		nptr++;
 	}
-	while (*nptr != '\0' && is_number(*nptr))
+	while (*nptr != '\0' && ft_isdigit(*nptr))
 	{
 		sum = sum * 10 + (*nptr - '0');
 		nptr++;

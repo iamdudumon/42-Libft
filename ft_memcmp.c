@@ -6,11 +6,11 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:18:04 by dukim             #+#    #+#             */
-/*   Updated: 2024/02/29 11:27:32 by dukim            ###   ########.fr       */
+/*   Updated: 2024/03/04 14:05:18 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
