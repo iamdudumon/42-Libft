@@ -15,7 +15,7 @@ char	*ft_strrchr(const char *s, int c)
 	unsigned int	len;
 
 	if (!s || *s == '\0')
-		return (s);
+		return ((char *)s);
 	len = 0;
 	while (s[len] != '\0')
 		len++;
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (len > 0)
 	{
 		if (*s == (char)c)
-			return (s);
+			return ((char *)s);
 		s++;
 		len--;
 	}
