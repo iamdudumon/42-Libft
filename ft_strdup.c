@@ -6,13 +6,13 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 14:21:55 by dukim             #+#    #+#             */
-/*   Updated: 2024/03/04 14:42:19 by dukim            ###   ########.fr       */
+/*   Updated: 2024/03/06 17:51:08 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*dup;
 	size_t	len;
