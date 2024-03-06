@@ -52,3 +52,12 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putstr_fd(nbr, fd);
 }
+/*
+#include <stdio.h>
+#include <fcntl.h>
+int	main()
+{
+	int fd = open("./putnbr.txt", O_WRONLY);
+	ft_putnbr_fd(12345, fd);
+	close(fd);
+}*/
