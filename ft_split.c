@@ -6,13 +6,13 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:30:36 by dukim             #+#    #+#             */
-/*   Updated: 2024/03/04 19:52:45 by dukim            ###   ########.fr       */
+/*   Updated: 2024/03/06 18:19:04 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_word_cnt(char const *s, char c)
+int	get_wordcnt(char const *s, char c)
 {
 	int	i;
 	int	cnt;
@@ -46,6 +46,20 @@ char	*make_str(char const *s, char c, int *index)
 	return (split);
 }
 
+void	*free_split(char **str_split, int j)
+{
+	int	i;
+
+	i = 0;
+	while (i <= j)
+	{
+		free(str_split[i]);
+		i++;
+	}
+	free(str_split);
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**str_split;
@@ -56,7 +70,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (s[i] == c && s[i])
 		i++;
-	word_cnt = get_word_cnt(&s[i], c);
+	word_cnt = get_wordcnt(&s[i], c);
 	str_split = (char **)malloc(sizeof(char *) * (word_cnt + 1));
 	str_split[word_cnt] = 0;
 	if (!str_split)
@@ -65,6 +79,8 @@ char	**ft_split(char const *s, char c)
 	while (j < word_cnt)
 	{
 		str_split[j] = make_str(&s[i], c, &i);
+		if (!str_split[j])
+			return (free_split(str_split, j));
 		while (s[i] == c && s[i])
 			i++;
 		j++;
