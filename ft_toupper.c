@@ -6,13 +6,13 @@
 /*   By: dukim <dukim@student.42gyeongsan.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 00:49:22 by dukim             #+#    #+#             */
-/*   Updated: 2024/02/29 01:46:58 by dukim            ###   ########.fr       */
+/*   Updated: 2024/03/08 18:25:42 by dukim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if ('a' <= c && c <= 'z')
-		return (c + ('a' - 'A'));
+		return (c - ('a' - 'A'));
 	return (c);
 }
