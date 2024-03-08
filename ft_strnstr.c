@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-size_t	is_in_str(const char *str_slice, const char *to_find)
+size_t	is_in_str(const char *str_slice, const char *to_find, size_t len)
 {
 	size_t	i;
 
 	i = 0;
-	while (to_find[i] != '\0')
+	while (to_find[i] != '\0' && i < len)
 	{
 		if (str_slice[i] != to_find[i])
 			return (0);
@@ -30,12 +30,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 
-	if (!big || !little || little[0] == '\0')
+	if (little[0] == '\0')
 		return ((char *)big);
 	i = 0;
 	while (big[i] != '\0' && i < len)
 	{
-		if (is_in_str(&big[i], little))
+		if (is_in_str(&big[i], little, len - i))
 			return ((char *)&big[i]);
 		i++;
 	}

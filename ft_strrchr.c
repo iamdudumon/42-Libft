@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	len;
+	int		len;
+	char	*temp;
 
-	if (!s || *s == '\0')
-		return ((char *)s);
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	s += len - 1;
-	while (len > 0)
+	temp = (char *)s;
+	len = ft_strlen(temp) - 1;
+	if (c == 0)
+		return (&temp[len + 1]);
+	while (len >= 0)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (temp[len] == c)
+			return (&temp[len]);
 		len--;
 	}
 	return (0);
