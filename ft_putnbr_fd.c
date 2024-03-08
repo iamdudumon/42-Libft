@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned int	pow_10(unsigned int un)
+unsigned int	pow_ten(unsigned int un)
 {
 	unsigned int	pow;
 
@@ -39,7 +39,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		un = n;
-	pow = pow_10(un);
+	pow = pow_ten(un);
 	while (pow)
 	{
 		nbr[i++] = (un / pow) + '0';
