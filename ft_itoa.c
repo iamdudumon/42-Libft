@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned int	pow_10(unsigned int un)
+static int	pow_ten(unsigned int un)
 {
 	unsigned int	pow;
 
@@ -26,7 +26,7 @@ unsigned int	pow_10(unsigned int un)
 
 char	*ft_itoa(int n)
 {
-	char				itoa[11];
+	char				itoa[12];
 	unsigned int		pow;
 	unsigned int		un;
 	int					i;
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 	}
 	else
 		un = n;
-	pow = pow_10(un);
+	pow = pow_ten(un);
 	while (pow)
 	{
 		itoa[i++] = (un / pow) + '0';

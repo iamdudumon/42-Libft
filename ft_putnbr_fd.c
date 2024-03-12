@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned int	pow_ten(unsigned int un)
+static int	pow_ten(unsigned int un)
 {
 	unsigned int	pow;
 
@@ -26,7 +26,7 @@ unsigned int	pow_ten(unsigned int un)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char				nbr[11];
+	char				nbr[12];
 	unsigned int		pow;
 	unsigned int		un;
 	int					i;

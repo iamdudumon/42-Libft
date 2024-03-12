@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_list	*init_lst(t_list **lst, void *(*f)(void *))
+static t_list	*init_lst(t_list **lst, void *(*f)(void *))
 {
 	t_list	*new;
 

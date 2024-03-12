@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-int	is_space_ch(char ch)
+static int	is_space_ch(char ch)
 {
 	if ((9 <= ch && ch <= 13) || ch == ' ')
 		return (1);
 	return (0);
 }
 
-int	is_sign_ch(char ch)
+static int	is_sign_ch(char ch)
 {
 	if (ch == '+' || ch == '-')
 		return (1);
