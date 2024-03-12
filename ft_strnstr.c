@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-size_t	is_in_str(const char *str_slice, const char *to_find, size_t len)
+static	size_t	is_in_str(const char *slice, const char *to_find, size_t len)
 {
 	size_t	i;
 
 	i = 0;
 	while (to_find[i] != '\0' && i < len)
 	{
-		if (str_slice[i] != to_find[i])
+		if (slice[i] != to_find[i])
 			return (0);
 		i++;
 	}
