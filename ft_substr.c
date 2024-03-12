@@ -17,11 +17,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	s_len;
 
-	if (!s || !len)
+	if (!s)
 		return (0);
-	s_len = ft_strlen((const char *)s);
-	if ((size_t)start + 1 > (size_t)s_len)
-		return (0);
+	s_len = ft_strlen(s);
+	if ((size_t)start >= (size_t)s_len)
+	{
+		len = 0;
+		start = (unsigned int)s_len;
+	}
 	if (s_len - (size_t)start < len)
 		len = s_len;
 	substr = (char *)malloc(sizeof(char) * (len + 1));
@@ -35,8 +38,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int main()
 {
-	if (!ft_substr("123456789", 5, 1))
+	char *str = ft_substr("123456789", 9, 0);
+	if (!str)
 		printf("is Null\n");
 	else
-		printf("%p\n", ft_substr("123456789", 5, 10));
+		printf("%s\n", str);
 }*/
