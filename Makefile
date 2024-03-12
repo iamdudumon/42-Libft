@@ -47,10 +47,6 @@ $(OBJS)	:	$(SRC)
 $(LST_OBJS)	:	$(LST_SRC)
 	$(CC) $(CFLAGS) -c $(LST_SRC)
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(LST_SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(LST_OBJS)	
-
 bonus:
 	@make BONUS=1 all
 
