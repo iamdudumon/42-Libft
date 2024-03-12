@@ -18,8 +18,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	convert_c;
 	size_t			size;
 
-	if (!s || n == 0)
-		return ((void *)s);
 	convert_s = (unsigned char *)s;
 	convert_c = (unsigned char)c;
 	size = 0;

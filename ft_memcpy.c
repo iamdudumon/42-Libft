@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*convert_src;
 	size_t			size;
 
-	if (dest == 0 || src == 0 || n == 0)
+	if (dest == src)
 		return (dest);
 	convert_dest = (unsigned char *)dest;
 	convert_src = (unsigned char *)src;
@@ -28,7 +28,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		*(convert_dest + size) = *(convert_src + size);
 		size++;
 	}
-	return ((void *)convert_dest);
+	return (dest);
 }
 /*
 #include <stdio.h>

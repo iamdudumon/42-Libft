@@ -18,8 +18,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	unsigned char	convert_c;
 	size_t			size;
 
-	if (s == 0 || n == 0)
-		return (s);
 	convert_s = (unsigned char *)s;
 	convert_c = (unsigned char)c;
 	size = 0;
