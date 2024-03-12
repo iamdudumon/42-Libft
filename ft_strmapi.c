@@ -33,28 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	mapi[i] = '\0';
 	return (mapi);
 }
-/*
-#include <stdio.h>
-
-char	func(unsigned int i, char c)
-{
-	c += i;
-	return (c);
-}
-
-char	upper(unsigned int i, char c)
-{
-	if (i > 0)
-		c = c;
-	if ('a' <= c && c <= 'z')
-		c -= ('a' - 'A');
-	return (c);
-}
-
-int	main()
-{
-	char	str[] = "aaaaaa";
-
-	printf("%s\n", ft_strmapi(str, &func));
-	printf("%s\n", ft_strmapi("HeLlO wOrLd!!", &upper));
-}*/

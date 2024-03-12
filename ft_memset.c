@@ -28,16 +28,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return ((void *)convert_s);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-int	main()
-{
-	int *str;
-	str = (int *)malloc(sizeof(int) * 100);
-	str = (int *)ft_memset(str, 1, sizeof(int) * 10);
-	for (int i = 0; i < 10; i++)
-		printf("%d\n", str[i]);
-}*/

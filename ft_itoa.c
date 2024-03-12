@@ -51,14 +51,3 @@ char	*ft_itoa(int n)
 		return (ft_strdup("0"));
 	return (ft_strdup(itoa));
 }
-/*
-#include <stdio.h>
-
-int	main(){
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(2147483647));
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(42));
-	printf("%s\n", ft_itoa(1000000000));
-	printf("%s\n", ft_itoa(-1000000000));
-}*/

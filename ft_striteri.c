@@ -23,18 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-#include <stdio.h>
-
-void	func(unsigned int i, char *c)
-{
-	*c += i;
-}
-
-int	main()
-{
-	char	str[] = "aaaaaa";
-
-	ft_striteri(str, &func);
-	printf("%s\n", str);
-}*/

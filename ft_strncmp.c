@@ -33,33 +33,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return (c1 - c2);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char *str1 = "1234";
-	char *str2 = "123456";
-	char *str3 = "abcdefg";
-	char *str4 = "abcdufg";
-	char *str5 = " ";
-	char *str6 = "   ";
-	char *str7 = "!@#$%";
-	char *str8 = "!@#$%";
-
-	printf("%s <-> %s: %d\n", str1, str2, ft_strncmp(str1, str2, 3));
-	printf("%s <-> %s: %d\n", str3, str4, ft_strncmp(str3, str4, 7));
-	printf("%s <-> %s: %d\n", str5, str6, ft_strncmp(str5, str6, 2));
-	printf("%s <-> %s: %d\n", str7, str8, ft_strncmp(str7, str8, 3));
-	printf("%s <-> %s: %d\n", str3, str4, ft_strncmp(str3, str4, 0));
-	printf("%d\n", ft_strncmp("test\200", "test\0", 6));
-	printf("%d\n", (unsigned char)'\200');
-	
-	printf("\n");
-
-	printf("%s <-> %s: %d\n", str1, str2, strncmp(str1, str2, 3));
-	printf("%s <-> %s: %d\n", str3, str4, strncmp(str3, str4, 7));
-	printf("%s <-> %s: %d\n", str5, str6, strncmp(str5, str6, 2));
-	printf("%s <-> %s: %d\n", str7, str8, strncmp(str7, str8, 3));
-	printf("%s <-> %s: %d\n", str3, str4, strncmp(str3, str4, 0));
-}*/

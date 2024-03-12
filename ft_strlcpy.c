@@ -28,16 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		src_len++;
 	return (src_len);
 }
-/*
-#include <stdio.h>
-
-int	main()
-{
-	//char dst1[100];
-	char dst2[100];
-	const char *str = "abcdef ghijk";
-
-	//printf("strlcpy: %d -> %s\n", strlcpy(dst1, str, 5), dst1);
-	printf("ft_strlcpy: %zu -> %s\n", ft_strlcpy(dst2, "sdlfjldsfjlsdf", 10), dst2);
-	printf("ft_strlcpy: %zu -> %s\n", ft_strlcpy(dst2, str, 0), dst2);
-}*/

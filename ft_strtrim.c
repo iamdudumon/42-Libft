@@ -38,12 +38,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, left_trim, right_trim - left_trim + 1));
 }
-/*
-#include <stdio.h>
-
-int	main()
-{
-	printf("%s\n", ft_strtrim("_!ABCDEFG#\0", "#A!_\0"));
-	printf("%s\n", ft_strtrim("_!ABCDEFG#", "\0"));
-	printf("%s\n", ft_strtrim("_!ABCDEFG#", ""));
-}*/

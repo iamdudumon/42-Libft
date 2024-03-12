@@ -33,14 +33,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(substr, &s[start], len + 1);
 	return (substr);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	char *str = ft_substr("123456789", 9, 0);
-	if (!str)
-		printf("is Null\n");
-	else
-		printf("%s\n", str);
-}*/

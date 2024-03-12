@@ -45,11 +45,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-/*#include <stdio.h>
-
-int	main()
-{
-	char big[] = "go go yogurt";
-	// char little[] = "gu";
-	printf("return(null) : %s\n", ft_strnstr(big,big,12));	//return(null) : null
-}*/

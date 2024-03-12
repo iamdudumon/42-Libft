@@ -29,13 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(join_str, s2, s1_len + s2_len + 1);
 	return (join_str);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	if (!ft_strjoin("123456789", "abcdefg"))
-		printf("is Null\n");
-	else
-		printf("%s\n", ft_strjoin("123456789", "abcdefg"));
-}*/
