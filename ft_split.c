@@ -67,35 +67,24 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (s[i] == c && s[i])
 		i++;
 	word_cnt = get_wordcnt(&s[i], c);
 	str_split = (char **)malloc(sizeof(char *) * (word_cnt + 1));
-	str_split[word_cnt] = 0;
 	if (!str_split)
 		return (0);
-	j = 0;
-	while (j < word_cnt)
+	str_split[word_cnt] = 0;
+	j = -1;
+	while (++j < word_cnt)
 	{
 		str_split[j] = make_str(&s[i], c, &i);
 		if (!str_split[j])
 			return (free_split(str_split, j));
 		while (s[i] == c && s[i])
 			i++;
-		j++;
 	}
 	return (str_split);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	char **split = ft_split(" ab   cd ef gh ij  ", ' ');
-	int i = 0;
-	while (split[i]){
-		printf("%s\n", split[i]);
-		i++;
-	}
-}*/
