@@ -23,7 +23,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	size = 0;
 	while (size < n)
 	{
-		*(convert_s + size) = convert_c;
+		convert_s[size] = convert_c;
 		size++;
 	}
 	return ((void *)convert_s);

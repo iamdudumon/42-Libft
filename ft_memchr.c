@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size = 0;
 	while (size < n)
 	{
-		if (*(convert_s + size) == convert_c)
+		if (convert_s[size] == convert_c)
 			return ((void *)(convert_s + size));
 		size++;
 	}

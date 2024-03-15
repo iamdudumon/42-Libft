@@ -23,8 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size = 0;
 	while (size < n)
 	{
-		if (*(convert_s1 + size) != *(convert_s2 + size))
-			return (*(convert_s1 + size) - *(convert_s2 + size));
+		if (convert_s1[size] != convert_s2[size])
+			return (convert_s1[size] - convert_s2[size]);
 		size++;
 	}
 	return (0);

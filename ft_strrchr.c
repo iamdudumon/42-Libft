@@ -20,11 +20,11 @@ char	*ft_strrchr(const char *s, int c)
 	temp = (char *)s;
 	len = ft_strlen(temp) - 1;
 	if (c == 0)
-		return (&temp[len + 1]);
+		return (temp + len + 1);
 	while (len >= 0)
 	{
 		if (temp[len] == c)
-			return (&temp[len]);
+			return (temp + len);
 		len--;
 	}
 	return (0);

@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] != '\0' && i < len)
 	{
 		if (is_in_str(&big[i], little, len - i + 1))
-			return ((char *)&big[i]);
+			return ((char *)(big + i));
 		i++;
 	}
 	return (0);
