@@ -13,6 +13,9 @@
 CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 NAME	=	libft.a
+GNL		=	libgnl.a
+GNL_DIR	=	gnl
+
 SRC		= 	ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c\
 			ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c\
 			ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strnstr.c\
@@ -36,10 +39,14 @@ endif
 
 .PHONY:		all bonus clean fclean re
 
-all		:	$(NAME)
+all		:	$(GNL) $(NAME)
 
-$(NAME)	:	$(FINAL_OBJS)
-		ar -rc $(NAME) $(FINAL_OBJS)
+$(NAME)	:	$(GNL) $(FINAL_OBJS)
+	ar -rc $(NAME) $(FINAL_OBJS)
+
+$(GNL):
+	@make -C $(GNL_DIR)
+	@cp $(GNL_DIR)/$(GNL) $(NAME)
 
 $(OBJS)	:	$(SRC)
 	$(CC) $(CFLAGS) -c $(SRC)
@@ -51,9 +58,11 @@ bonus:
 	@make BONUS=1 all
 
 clean:
+	@make clean -C $(GNL_DIR)
 	@rm -f $(OBJS) $(LST_OBJS)
 
 fclean:		clean
+	@make fclean -C $(GNL_DIR)
 	@rm -f $(NAME)
 
 re:			fclean all
