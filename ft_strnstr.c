@@ -31,11 +31,15 @@ static	size_t	is_in_str(const char *slice, const char *to_find, size_t len)
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	big_len;
 
 	if (!big && len == 0)
 		return (0);
 	if (little[0] == '\0')
 		return ((char *)big);
+	big_len = ft_strlen(big);
+	if (len > big_len)
+		len = big_len;
 	i = 0;
 	while (big[i] != '\0' && i < len)
 	{

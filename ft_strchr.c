@@ -12,6 +12,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	while (c > 256)
+		c -= 256;
 	while (*s != '\0')
 	{
 		if (*s == c)
